@@ -1,56 +1,46 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bewerbung - Yemi Emmanuel</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <div class="contact-info">
-                <h1>Yemi Emmanuel</h1>
-                <p>Sägemattstrasse 64, 3098 Köniz</p>
-                <p>Geboren am 13.04.2009</p>
-            </div>
-            <div class="cv-download">
-                <h2>Lebenslauf</h2>
-                <a href="lebenslauf.pdf" class="download-btn" download>Download PDF</a>
-            </div>
-        </div>
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-        <div class="application">
-            <div class="date-placeholder">
-                <p>Köniz, <span id="current-date"></span></p>
-            </div>
-            
-            <div class="letter-content">
-                <p>Sehr geehrter Herr/Frau [Nachname],</p>
-                
-                <p>mit großem Interesse habe ich Ihre Stellenausschreibung auf [Plattform/Zeitung] gelesen und bewerbe mich hiermit um die Position als [Stellenbezeichnung] in Ihrem Unternehmen.</p>
-                
-                <p>Derzeit besuche ich die [Name der Schule] in [Ort] und werde diese voraussichtlich im [Monat/Jahr] mit dem [Abschluss] abschließen. In meiner schulischen Laufbahn konnte ich bereits wertvolle Kenntnisse in [relevanter Bereich] sammeln und mein Interesse an [Thema] vertiefen.</p>
-                
-                <p>Besonders ansprechend finde ich an Ihrer Firma [spezifischer Aspekt des Unternehmens], da [Begründung]. Ich bin überzeugt, dass ich mit meinen Fähigkeiten in [Fähigkeit] und meiner [weitere Stärke] eine wertvolle Bereicherung für Ihr Team darstellen kann.</p>
-                
-                <p>Über die Gelegenheit, mich in einem persönlichen Gespräch näher vorzustellen, würde ich mich sehr freuen.</p>
-                
-                <p>Mit freundlichen Grüßen</p>
-                
-                <div class="signature">
-                    <p>Yemi Emmanuel</p>
-                </div>
-            </div>
-        </div>
-    </div>
+body {
+  padding: 20px;
+}
 
-    <script>
-        // Set current date
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        const today = new Date();
-        document.getElementById('current-date').textContent = today.toLocaleDateString('de-CH', options);
-    </script>
-</body>
-</html>
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-center-gap {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.grid-template {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+}
+
+.box {
+  background-color: rgb(122, 150, 198);
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 100px;
+}
+
+.box-size-auto {
+  width: auto;
+}
